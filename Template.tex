@@ -1,0 +1,62 @@
+%============================总模板================================
+
+%======页边距=======
+\usepackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm}
+
+%=====格式=====
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+\usepackage{multicol}
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{3pt} % Spacing around sections
+\documentclass[a4paper,10pt]{article} % Default font size and paper size
+
+%======中文=======
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin} % Main document font
+\usepackage{xeCJK} % 可以使用中文，而且有粗体，斜体
+\setCJKmainfont{宋体-简 常规体} % 设置默认中文字体，不影响默认英文字体
+\newCJKfontfamily\Hei{冬青黑体简体中文 W3}   %定義指令\Hei則切換成正黑體
+
+%======代码设置=======
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily, breaklines=true, tabsize=4, frame=single, numbers = left, numberstyle = \tiny, keywordstyle= \color{ blue!70}, commentstyle=\color{red!50!green!50!blue!50}}
+
+%=====超链接=====
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+
+%======正文开始=======
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+\par{\centering{\Huge Xiaohan \textsc{Zhang} }\bigskip\par} % Your name
+
+\begin{center}
+\textsc{Address:} A03 Wenxing Plaza Industrial Park Suzhou Jiangsu\\
+\textsc{Phone:}  (+86) 131-4188-2486\\
+\textsc{Email:}  {Xiaohan.Zhang15@student.xjtlu.edu.cn}\\
+
+\end{center}
+
+
+\end{document}
+
+
+%=====插入代码=====
+
+\begin{lstlisting}[language=C++]
+struct BitmapFileHeader           
+{
+	unsigned int   bfOffBits;
+}
+\end{lstlisting}
+%=====插入代码=====
